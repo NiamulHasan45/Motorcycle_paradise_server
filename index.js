@@ -32,7 +32,6 @@ async function run() {
 
     app.get('/inventory/:id', async (req, res) => {
       const id = req.params.id;
-      console.log(id);
       const query = { _id: ObjectId(id) };
       const service = await itemsCollection.findOne(query);
       res.send(service);
@@ -56,7 +55,7 @@ async function run() {
     app.put('/inventory/:id', async(req, res) =>{
       const id = req.params.id;
       const updatedItem = req.body;
-      
+      console.log(updatedItem);
       const filter = {_id: ObjectId(id)};
       const options = { upsert: true };
       const updatedDoc = {
