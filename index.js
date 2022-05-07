@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-  res.send('Running');
+  res.send('Running Motorcycle server');
 });
 
 const uri = `mongodb+srv://${process.env.USER_ID}:${process.env.USER_PASS}@cluster0.hw2ul.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
